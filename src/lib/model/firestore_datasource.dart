@@ -12,7 +12,8 @@ class FirestoreDatasource {
 
   Future<List<Map<String, dynamic>>> fetchData(
       String path, String documentId) async {
-    final documentReference = firestoreInstance.doc(path);
+    final documentReference =
+        firestoreInstance.collection(path).doc(documentId);
 
     final snapshot = await documentReference.get();
     if (snapshot.exists) {
