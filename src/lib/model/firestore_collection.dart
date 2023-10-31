@@ -1,11 +1,11 @@
-import 'package:fire_report/model/field_metadata.dart';
+import 'package:fire_report/model/firestore_field.dart';
 import 'package:fire_report/model/metadata.dart';
 
-class CollectionMetadata extends Metadata {
-  final List<FieldMetadata> fields;
-  final List<CollectionMetadata> subcollections;
+class FirestoreCollection extends Metadata {
+  final List<FirestoreField> fields;
+  final List<FirestoreCollection> subcollections;
 
-  CollectionMetadata({
+  FirestoreCollection({
     int index = 0,
     required String name,
     required String description,
